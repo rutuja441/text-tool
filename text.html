@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT MATCHER</title>
+    <link rel="stylesheet" href="text.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="heading">String Comparator</h2>
+
+    <div class="text-container">
+        <input type="text" class="input-text" id="input1" onkeyup="compareText()"/>
+        <input type="text" class="input-text" id="input2" onkeyup="compareText()"/>
+    </div>
+
+    <p class="result" id="match-result">
+
+    </p>
+</div>
+
+<script>
+      function compareText()
+   {
+        const input1Element = document.getElementById("input1")
+        const input2Element = document.getElementById("input2")
+
+        const resultElement = document.getElementById("match-result")
+
+        if(input1Element.value == input2Element.value){
+            resultElement.innerText = "Text Matched!!!"
+            resultElement.style.color = "green"
+        }
+        else{
+            resultElement.innerText = " Text Not Matched!!!"
+            resultElement.style.color = "red"
+
+        }
+    }
+</script>
+</body>
+</html>
